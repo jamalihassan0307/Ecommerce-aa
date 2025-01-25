@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Initialize everything after DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNavbar();
+            // Initialize products if needed
+            if (!localStorage.getItem('products')) {
+                updateLocalStorage();
+            }
+            // Wait a bit for navbar to load before rendering cart
+            setTimeout(renderCart, 100);
+        });
+    </script>
+</body>
+</html> 

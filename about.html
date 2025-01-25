@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-text {
+            line-height: 1.8;
+        }
+
+        .team-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid var(--primary-color);
+        }
+
+        .team-member h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="about-container">
+        <div class="about-header">
+            <h1>About Us</h1>
+            <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f" alt="Company Image" class="about-image">
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Founded in 2023, our ecommerce platform has grown from a small startup to a trusted marketplace. We believe in providing quality products and exceptional customer service.</p>
+            </div>
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>We strive to create a seamless shopping experience while maintaining the highest standards of product quality and customer satisfaction.</p>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Team Member">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Team Member">
+                    <h3>Jane Smith</h3>
+                    <p>CTO</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Team Member">
+                    <h3>Mike Johnson</h3>
+                    <p>Head of Operations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        loadNavbar();
+    </script>
+</body>
+</html> 

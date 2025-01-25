@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="dashboard-container">
+        <div class="admin-panel panel">
+            <div>
+                <button onclick="addProduct()" class="nav-button">Add New Product</button>
+            </div>
+        </div>
+
+        <div class="user-panel panel">
+            
+        </div>
+
+        <div class="search-filter-container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+            <div class="filter-dropdown">
+                <select id="priceFilter">
+                    <option value="">Sort by Price</option>
+                    <option value="low-to-high">Price: Low to High</option>
+                    <option value="high-to-low">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <!-- Products will be rendered here -->
+        </div>
+    </div>
+
+    <div id="productFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle">Add New Product</h2>
+            <form id="productForm" onsubmit="event.preventDefault(); validateAndSaveProduct();">
+                <input type="hidden" id="productId">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Price:</label>
+                    <input type="number" id="productPrice" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="productQuantity">Quantity:</label>
+                    <input type="number" 
+                           id="productQuantity" 
+                           min="0" 
+                           oninput="this.value = this.value < 0 ? 0 : this.value"
+                           required>
+                    <span class="error-message" id="quantityError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Image URL:</label>
+                    <input type="url" id="productImage" required>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Description:</label>
+                    <textarea id="productDescription" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Save Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        loadNavbar();
+        window.onload = initializeDashboard;
+
+        function validateAndSaveProduct() {
+            const productData = {
+                name: document.getElementById('productName').value,
+                price: parseFloat(document.getElementById('productPrice').value),
+                quantity: parseInt(document.getElementById('productQuantity').value),
+                image: document.getElementById('productImage').value,
+                description: document.getElementById('productDescription').value
+            };
+
+            try {
+                if (validateProductData(productData)) {
+                    saveProduct();
+                }
+            } catch (error) {
+                showNotification(error.message);
+            }
+        }
+
+        document.getElementById('productQuantity').addEventListener('input', function(e) {
+            const quantityError = document.getElementById('quantityError');
+            if (this.value < 0) {
+                quantityError.textContent = 'Quantity cannot be negative';
+                this.value = 0;
+            } else if (this.value === '') {
+                quantityError.textContent = 'Quantity is required';
+            } else {
+                quantityError.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html> 
