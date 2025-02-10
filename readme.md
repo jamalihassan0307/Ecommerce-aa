@@ -1,10 +1,10 @@
 <div align="center">
-      <h1> <img src="screenshots/logo.png" width="80px"><br/>E-Commerce Website</h1>
+      <h1> <img src="screenshots/logo.png" width="80px"><br/>ShopHub</h1>
       <h3>Modern Shopping Experience</h3>
 </div>
 
 <p align="center">
-    <a href="https://your-live-demo-url.com" target="_blank">
+    <a href="https://jamalihassan0307.github.io/Ecommerce-aa" target="_blank">
         <img alt="" src="https://img.shields.io/badge/Website-EA4C89?style=normal&logo=dribbble&logoColor=white" style="vertical-align:center" />
     </a>
     <a href="https://your-facebook-url.com" target="_blank">
@@ -27,7 +27,50 @@ A feature-rich e-commerce platform offering a seamless shopping experience. Buil
 
 ## 🔴 Live Demo
 
-Check out the live demo: [E-Commerce Website](https://your-live-demo-url.com)
+Check out the live demo: [ShopHub](https://jamalihassan0307.github.io/Ecommerce-aa)
+
+## 📸 Screenshots
+
+### About Section
+
+<div align="center">
+  <img src="screenshots/about.png" alt="About Page" width="400"/>
+  <img src="screenshots/about1.png" alt="About Details" width="400"/>
+  <p><em>Overview and company information</em></p>
+</div>
+
+### Admin Interface
+
+#### Dashboard & Product Management
+
+<div align="center">
+  <img src="screenshots/admin_home.png" alt="Admin Dashboard" width="400"/>
+  <img src="screenshots/admin_home1.png" alt="Admin Dashboard Extended" width="400"/>
+  <p><em>Comprehensive admin control panel</em></p>
+</div>
+
+#### Product Operations
+
+<div align="center">
+  <img src="screenshots/add_product.png" alt="Add Product" width="400"/>
+  <img src="screenshots/edit_product.png" alt="Edit Product" width="400"/>
+  <p><em>Product management interface</em></p>
+</div>
+
+#### Admin Profile
+
+<div align="center">
+  <img src="screenshots/admin_profile.png" alt="Admin Profile" width="400"/>
+  <p><em>Administrator profile management</em></p>
+</div>
+
+### User Interface
+
+<div align="center">
+  <img src="screenshots/user_home.png" alt="User Dashboard" width="400"/>
+  <img src="screenshots/user_profile.png" alt="User Profile" width="400"/>
+  <p><em>User dashboard and profile management</em></p>
+</div>
 
 ## 🚀 Features
 
